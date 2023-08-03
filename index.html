@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Binary Tree Visualization</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+
+  <body class="bg-[#2026B2] pb-8">
+
+    <div class="flex flex-col justify-center items-center w-full">
+      
+      <div  class="heading  text-[50px] flex  bg-black w-full py-5 place-content-center" >
+          <div>T</div>
+          <div>R</div>
+          <div>E</div>
+          <div>E</div>
+          <div>&nbsp &nbsp</div>
+          <div>V</div>
+          <div>I</div>
+          <div>S</div>
+          <div>U</div>
+          <div class="transition-all duration-500 hover:animate-ping">A</div>
+          <div>L</div>
+          <div>I</div>
+          <div>Z</div>
+          <div>E</div>
+          <div class="transition-all duration-500 animate-bounce">R</div>
+      </div>
+    </div>
+
+    <div class="w-full flex flex-col justify-center items-center">
+      <div class="flex gap-x-2 items-center mt-3 ">
+        <label class="">ARRAY:</label><br />
+        <input class="boreder-r border-black rounded-md p-3 bg-[#f0f8ff]" type="text" id="array-input" name="array" />
+      </div>
+  
+      
+      <div id="options" class="flex gap-x-4 mt-3">
+        <button class="options hover:scale-105 transition-all duration-500"  id="button1" onclick="treeAndArray()">Binary Tree Visualization</button>
+        <button class="options hover:scale-105 transition-all duration-500" id="button2" onclick="heapify()">Max-Heap Visualization</button>
+        <button class="options hover:scale-105  transition-all duration-500" id="button3" onclick="createBinarySearchTree()">Binary Search Tree Visualization</button>
+      </div>
+  
+      <!-- <img src="Logo.jpg" width="200" height="150"> -->
+      <div id="blurb" class="shadow-xl">
+        <div id="visual-title">Choose an option</div>
+        <div id="instructions">Below is the binary tree of given input</div>
+      </div>
+      <div class="w-full flex place-content-center mt-5">
+        <div id="binary-tree"></div>
+      </div>
+      <div id="array-visual"></div>
+
+      <div id="treeInstructions" class="bg-[#7679D0] p-5 rounded-md">
+        <div>index of current/parent node : i</div>
+        <div>index of left child node : 2i + 1</div>
+        <div>index of right child node : 2i + 2</div>
+      </div>
+    </div>
+
+    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="nodes.js"></script>
+    <script src="heap.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
